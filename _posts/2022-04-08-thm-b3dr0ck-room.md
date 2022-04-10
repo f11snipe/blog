@@ -6,8 +6,13 @@ post_time: '06:15 PM'
 permalink: /blog/thm-b3dr0ck/
 published: false
 categories:
-  - example
-  - stuff
+  - thm
+  - ctf
+  - b3dr0ck
+  - f11snipe
+  - linux
+  - tls
+  - ssl
 
 ---
 New post content ...
