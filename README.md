@@ -1,2 +1,2 @@
-# jekyll-sockz-blog
-Sockz Blog - Jekyll
+# blog
+F11snipe - Jekyll

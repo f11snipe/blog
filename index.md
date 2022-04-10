@@ -5,7 +5,15 @@
 layout: home
 ---
 
-## Welcome
+## F11snipe
+
+
+**Homepage Coming Soon!**
+
+```
+here's some boilerplate jekyll homepage action...
+```
+
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 

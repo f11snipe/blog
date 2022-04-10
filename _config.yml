@@ -18,15 +18,15 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Sockz.io
-email: support@sockz.io
+title: F11snipe
+email: f11snipe@sockz.io
 description: >- # this means to ignore newlines until "baseurl:"
-  Fun with TLS sockets! Stay tuned.
+  F11snipe blogging about stuff
   Coming Soon...
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://sockz.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: sockz_io
-github_username:  sockz-io
+url: "https://blog.charlie.cloud" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: f11snipe
+github_username:  f11snipe
 
 # Build settings
 theme: minima
@@ -39,8 +39,8 @@ plugins:
 collections:
   posts:
     output: true
-  products:
-    output: true
+  # products:
+  #   output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
