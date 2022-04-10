@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ollie - THM Writeup
+title: 'Ollie - {THM}'
 post_date: 04/08/2022
 post_time: '06:15 PM'
 permalink: /blog/thm-ollie/
