@@ -49,9 +49,9 @@ categories:
 <div><span style="color: #9aa83a;">Ok, I'</span>m back.</div>
 <div>After a lengthy discussion, we<span style="color: #9aa83a;">'ve come to the conclusion that you are the right person for the job.Here are the credentials for our administration panel.</span></div>
 <br />
-<div><span style="color: #9aa83a;">                    Username: admin</span></div>
+<div><span style="color: #9aa83a;"> Username: admin</span></div>
 <br />
-<div><span style="color: #9aa83a;">                    Password: OllieUnixMontgomery!</span></div>
+<div><span style="color: #9aa83a;"> Password: OllieUnixMontgomery!</span></div>
 <br />
 <div><span style="color: #9aa83a;">PS: Good luck and next time bring some treats!</span></div>
 <br />
@@ -151,7 +151,7 @@ categories:
 <div><span style="color: #9aa83a;">su - ollie (same password :P)</span></div>
 <br />
 <div><span style="color: #9aa83a;">cat user.txt</span></div>
-<div><span style="color: #9aa83a;">THM{Ollie_boi_is_daH_Cut3st}</span></div>
+<div><span style="color: #9aa83a;">THM{*********}</span></div>
 <br /><br />
 <div><span style="color: #9aa83a;">ollie@hackerdog:/etc$ find / -perm -u=s -type f 2&gt;/dev/null | rev | cut -d'</span>/<span style="color: #9aa83a;">' -f 1 | rev | sort | uniq</span></div>
 <div><span style="color: #9aa83a;">at</span></div>
@@ -185,18 +185,18 @@ categories:
 <br />
 <div><span style="color: #9aa83a;"># Example of job definition:</span></div>
 <div><span style="color: #9aa83a;"># .---------------- minute (0 - 59)</span></div>
-<div><span style="color: #9aa83a;"># |  .------------- hour (0 - 23)</span></div>
-<div><span style="color: #9aa83a;"># |  |  .---------- day of month (1 - 31)</span></div>
-<div><span style="color: #9aa83a;"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></div>
-<div><span style="color: #9aa83a;"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></div>
-<div><span style="color: #9aa83a;"># |  |  |  |  |</span></div>
-<div><span style="color: #9aa83a;"># *  *  *  *  * user-name command to be executed</span></div>
-<div><span style="color: #9aa83a;">17 *  * * * root    cd / &amp;&amp; run-parts --report /etc/cron.hourly</span></div>
-<div><span style="color: #9aa83a;">25 6  * * * root  test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.daily )</span></div>
-<div><span style="color: #9aa83a;">47 6  * * 7 root  test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.weekly )</span></div>
-<div><span style="color: #9aa83a;">52 6  1 * * root  test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )</span></div>
+<div><span style="color: #9aa83a;"># | .------------- hour (0 - 23)</span></div>
+<div><span style="color: #9aa83a;"># | | .---------- day of month (1 - 31)</span></div>
+<div><span style="color: #9aa83a;"># | | | .------- month (1 - 12) OR jan,feb,mar,apr ...</span></div>
+<div><span style="color: #9aa83a;"># | | | | .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></div>
+<div><span style="color: #9aa83a;"># | | | | |</span></div>
+<div><span style="color: #9aa83a;"># * * * * * user-name command to be executed</span></div>
+<div><span style="color: #9aa83a;">17 * * * * root cd / &amp;&amp; run-parts --report /etc/cron.hourly</span></div>
+<div><span style="color: #9aa83a;">25 6 * * * root test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.daily )</span></div>
+<div><span style="color: #9aa83a;">47 6 * * 7 root test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.weekly )</span></div>
+<div><span style="color: #9aa83a;">52 6 1 * * root test -x /usr/sbin/anacron || ( cd / &amp;&amp; run-parts --report /etc/cron.monthly )</span></div>
 <br /><br />
-<div><span style="color: #9aa83a;">ollie@hackerdog:/etc/cron.d$ cat /etc/passwd | cut -d: -f1    # List of users</span></div>
+<div><span style="color: #9aa83a;">ollie@hackerdog:/etc/cron.d$ cat /etc/passwd | cut -d: -f1 # List of users</span></div>
 <div><span style="color: #9aa83a;">root</span></div>
 <div><span style="color: #9aa83a;">daemon</span></div>
 <div><span style="color: #9aa83a;">bin</span></div>
