@@ -441,7 +441,7 @@ NjhlYjMxZDk5YTczODRiZTcwYTExYzBjZmI2ZGFjMTIK</pre>
 <li>So that worked, still looks encoded though ... now back in&nbsp;<strong>base64</strong>&nbsp;</li>
 <li>
 <pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode | base32 --decode | base64 --decode
-68eb31d99a7384be70a11c0cfb6dac12</pre>
+a00a12aad6b7c16bf07032bd05a31d56</pre>
 </li>
 <li>There it is! That looks like password or hash ... let's try password first</li>
 <li>
@@ -450,6 +450,7 @@ Password:
 root@b3dr0ck:~# 
 </pre>
 </li>
+<li>Hmm that's not it, looks like a hash... Let's check somewhere like <a title="Crack Station" href="https://crackstation.net/" target="_blank" rel="noopener">CrackStation</a></li>
 <li>
 <p>That was easy! Now let's get the final flag:&nbsp;<strong>root.txt</strong></p>
 </li>
