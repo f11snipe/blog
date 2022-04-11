@@ -27,17 +27,19 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://f11snipe.cloud" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: f11snipe
 github_username:  f11snipe
-author:
-  name: F11snipe
-  url: https://f11snipe.cloud/
-  picture: /assets/img/whitewalker.png
-  twitter: f11snipe
-social:
-  name: F11snipe
-  links:
-    - https://f11snipe.cloud
-    - https://github.com/f11snipe
-    - https://twitter.com/f11snipe
+author: F11snipe
+
+# author:
+#   name: F11snipe
+#   url: https://f11snipe.cloud/
+#   picture: /assets/img/whitewalker.png
+#   twitter: f11snipe
+# social:
+#   name: F11snipe
+#   links:
+#     - https://f11snipe.cloud
+#     - https://github.com/f11snipe
+#     - https://twitter.com/f11snipe
 
 # Build settings
 theme: minima
