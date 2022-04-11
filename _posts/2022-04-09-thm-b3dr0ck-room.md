@@ -447,7 +447,7 @@ a00a12aad6b7c16bf07032bd05a31d56</pre>
 <li>
 <pre>fred@b3dr0ck:~$ su - root
 Password: 
-root@b3dr0ck:~# 
+su: Authentication failure
 </pre>
 </li>
 <li>Hmm that's not it, looks like a hash... Let's check somewhere like <a title="Crack Station" href="https://crackstation.net/" target="_blank" rel="noopener">CrackStation</a></li>
