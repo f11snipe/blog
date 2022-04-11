@@ -431,12 +431,12 @@ User fred may run the following commands on b3dr0ck:
 <li>Let's try to see what's in that file...</li>
 <li>
 <pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode
-JZVGQ3CZNJGXQWSENM2VSVDDPJHUIUTJLJKGG52ZKRCXQWL2IJVFU3KJGJNEORTKJVKESSYK</pre>
+LFKEC52ZKRCXSWKXIZVU43KJGNMXURJSLFWVS52OPJAXUTLNJJVU2RCWNBGXURTLJZKFSSYK</pre>
 </li>
 <li>Ok cool, that output still looks encoded... But looks more like&nbsp;<strong>base32</strong> than&nbsp;<strong>base64</strong>, let's keep decoding</li>
 <li>
 <pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode | base32 --decode
-NjhlYjMxZDk5YTczODRiZTcwYTExYzBjZmI2ZGFjMTIK</pre>
+YTAwYTEyYWFkNmI3YzE2YmYwNzAzMmJkMDVhMzFkNTYK</pre>
 </li>
 <li>So that worked, still looks encoded though ... now back in&nbsp;<strong>base64</strong>&nbsp;</li>
 <li>
