@@ -108,21 +108,21 @@ socat stdio ssl:MACHINE_IP:54321,cert=&lt;CERT_FILE&gt;,key=&lt;KEY_FILE&gt;,ver
 Sounds like you forgot your certificate. Let's find it for you...
 
 -----BEGIN CERTIFICATE-----
-MIICoTCCAYkCAgTSMA0GCSqGSIb3DQEBCwUAMBQxEjAQBgNVBAMMCWxvY2FsaG9z
-dDAeFw0yMjA0MTAyMjI3MzNaFw0yMzA0MTAyMjI3MzNaMBgxFjAUBgNVBAMMDUJh
-cm5leSBSdWJibGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQD0GdL0
-lGcTywIjd8uJJoyGH5m4t/B1+SaOgWPtz+ehGsxKQbQBbq7UzsvNRtzH+3dv244O
-KUWH5gWzparA+KTWgkit3W+Lybe89dcCJ5w8Vl7OifXn59dJkrQJieQHg1PSbdzd
-PFYNNhkv5fFXsOQE0tnr0qNLbVugx566k3oKJwQiuhLTICGNL90wDC9KdkDAMzuJ
-Xjoz0YvG+hK8trcuxy67AbxzMKZuT1RNrxnhUpevRe9tw721nmY3KUd1o87o5x6l
-WIR2vnkYjMept+Yp2+sHlUd4DTpn7y6YA8TCAxvscg2idP6YehnH9/ML6Vj+Sp0j
-OlQWGKLvbZV87i7DAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAFz2UYKtBTlRYqlU
-t5czCj8FfkUT/tbuZtfDp2FddEcJOBPHJZGD1sKiNgqAzeAXYcluELOy/E5wgD9E
-MFs4NFGJJEOvqplf+bfpvbQ6cOVNDN0BF+AgjNCaAydJHvwUbvPeA5j7Mqan6HJA
-ggmTJGTI6mdustCaYJ/4dRo8WeO473aGYtC3wqwaKw6DVNqDAVIc4d6KITP4BzAZ
-9iuNYuh0jJcge1SHYGMSW87b8XTCuDpYgts+oKA6Z3+YGPez3g8KwZAYhaJ75eYe
-oiaheRhUyPndTqjFzIzx9pjj52cf9/xeYd/1agg+axfY9l65znYSrVPnIcuovD8w
-QHHocgs=
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+********
 -----END CERTIFICATE-----</pre>
 </li>
 <li>BOOM! Got a certificate! The other response mentioned a private key also, I wonder...</li>
@@ -131,31 +131,31 @@ QHHocgs=
 Sounds like you forgot your private key. Let's find it for you...
 
 -----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEA9BnS9JRnE8sCI3fLiSaMhh+ZuLfwdfkmjoFj7c/noRrMSkG0
-AW6u1M7LzUbcx/t3b9uODilFh+YFs6WqwPik1oJIrd1vi8m3vPXXAiecPFZezon1
-5+fXSZK0CYnkB4NT0m3c3TxWDTYZL+XxV7DkBNLZ69KjS21boMeeupN6CicEIroS
-0yAhjS/dMAwvSnZAwDM7iV46M9GLxvoSvLa3LscuuwG8czCmbk9UTa8Z4VKXr0Xv
-bcO9tZ5mNylHdaPO6OcepViEdr55GIzHqbfmKdvrB5VHeA06Z+8umAPEwgMb7HIN
-onT+mHoZx/fzC+lY/kqdIzpUFhii722VfO4uwwIDAQABAoIBAG7qaQvPfwLkZOVe
-4rJAPOwY4c2obu/8NUPdkV2W8cYnmhpHvpZEB9cU3FA7WcjY/81o8ySGJlz47TBT
-H8KteKEr9ABktPHMx9tpzbfh7cEQ8eVhlMY6d32r1njbGi07xFPCrfAtIWDBazJz
-hnV1IDb85B6eyKpWV6M38W0P5A1GCBCwYwqjP2oBKaHxnDKyiBIHPazc1bPQNo3Q
-z2rh9aIoVtSVL44zuc6R0pGppvIdHOy5v2RfRAzmFuqPDr0xpHvxHI92zirmCLxi
-lEeq0hEHl0XaezKu1//LrBBxng7sDN8zEgCIfaVGU+eEaLhmjOV6jkjYXbTn3HnF
-RFLzLTkCgYEA/A1BlspCIqnL48NVhjAQ7rnF7bnYPAeEBnAsYl2rUoYX5pTJy9fA
-tGi4fxA6yZ+JIu//o8GLEZOpUrXN0yyKNUjLxTn5Fkw5b5Xpk9/fVlIv7lnv0tx+
-bpLOVrc3lL08pRi6ri1TCoSo9e1UXm8aaNOsQQakp2FOtmDMQqYx8q0CgYEA9+yv
-JysNuVAzvdccwNgtkrOaov57iwYXZKMatFZDmjKrggxpRC47QaILBAKkhuY9loiP
-RYrTh26c0NvAWcel702msDKhtIYSiGKEhhCjetMtwEQHozVwDHcgaiY6G9ijmQ6J
-ADFX/ZH0vL89HWd9UaKbXsXu7dUJ3xBFIdYCRS8CgYAKNQc48gvnl3S4TorCGmQ1
-JrTLQcFt/Oft0tEZUq3Dc8a4AcKCTMRzCeKe0qtuytUk4w85NHdLSO2MeexR5vXZ
-3o7R990MeB3DVRDWejRzLHTgdCfwJBnCpJNSk6zeiyNPlEbLEu7P+DtXajsGb/1j
-zV6ma3xzgs9LN3ROJqjTKQKBgQDnWPpcv2UwDrIprSjMny1vnp9nB7d7FHUR2M2b
-iH/OzQeT9Ebqc4WiCjbjSCAFLaY86TNgflpDH6m/j8AfRxkFhF1OQAD7NrzmfaAS
-hkY24AbqSdEisEPdrfAWfZNt1qtasOCQyHrGSMOquX2rCZ48ZlM7jdIWJtzuRP1t
-xIkbywKBgE0pqu4L98MFQ4NxfEAkSHmRIIVxewW89qSm5pCMzr9YzXLHlXbTUu1S
-CbipVXzzHspb+jkPFohQORTOK1sb4IJcA7+dEuQO3CJ2s8PT1MUOcbuWGRQSt0Rl
-7u12J3N1/k/ZygC+c9alrGEm/GuWUYAGW5LkbmAqJO8VXQ0B5fD6
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************************
+****************************************************
 -----END RSA PRIVATE KEY-----</pre>
 </li>
 <li>Got it! Cool, let's save these to local files:&nbsp;<strong>client.crt</strong> and <strong>client.key</strong></li>
@@ -188,7 +188,7 @@ b3dr0ck&gt; ls
 Unrecognized command: 'ls'
 
 This service is for login and password hints<br />b3dr0ck&gt; help
-Password hint: d1ad7c0a3805955a35eb260dab4180dd (user = 'barney')
+Password hint: ******************************** (user = 'barney')
 </pre>
 </li>
 <li>
@@ -438,17 +438,17 @@ User fred may run the following commands on b3dr0ck:
 <li>Let's try to see what's in that file...</li>
 <li>
 <pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode
-LFKEC52ZKRCXSWKXIZVU43KJGNMXURJSLFWVS52OPJAXUTLNJJVU2RCWNBGXURTLJZKFSSYK</pre>
+************************************************************************</pre>
 </li>
 <li>Ok cool, that output still looks encoded... But looks more like&nbsp;<strong>base32</strong> than&nbsp;<strong>base64</strong>, let's keep decoding</li>
 <li>
 <pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode | base32 --decode
-YTAwYTEyYWFkNmI3YzE2YmYwNzAzMmJkMDVhMzFkNTYK</pre>
+********************************************</pre>
 </li>
 <li>So that worked, still looks encoded though ... now back in&nbsp;<strong>base64</strong>&nbsp;</li>
 <li>
 <pre>fred@b3dr0ck:~$ sudo base64 /root/pass.txt | base64 --decode | base32 --decode | base64 --decode
-a00a12aad6b7c16bf07032bd05a31d56</pre>
+********************************</pre>
 </li>
 <li>There it is! That looks like password or hash ... let's try password first</li>
 <li>
