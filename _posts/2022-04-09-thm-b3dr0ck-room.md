@@ -468,4 +468,4 @@ THM{***}</pre>
 </ul>
 </li>
 </ul>
-<p>&nbsp;</p>
+<p>Signup for TryHackMe today! <a title="Try Hack Me Homepage" href="https://tryhackme.com/" target="_blank" rel="noopener">tryhackme.com</a></p>
