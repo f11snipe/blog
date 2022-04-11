@@ -1,7 +1,10 @@
 ---
 layout: post
 title: 'b3dr0ck - {THM}'
-description: "Created my first CTF room on TryHackMe! Gain access to the ABC servers, using lightweight custom TCP/TLS/HTTPS services. Learn about TLS certificate authorization and more!"
+description: >-
+  Created my first CTF room on TryHackMe! Gain access to the ABC servers, using
+  lightweight custom TCP/TLS/HTTPS services. Learn about TLS certificate
+  authorization and more!
 image: /assets/img/b3dr0ck/gazoo.png
 permalink: /blog/thm-b3dr0ck/
 published: true
@@ -20,8 +23,7 @@ categories:
   - ssl
 
 ---
-<h2>b3dr0ck</h2>
-<p>Join room: <a title="Join this room!" href="https://tryhackme.com/jr/b3dr0ck" target="_blank" rel="noopener">tryhackme.com/jr/b3dr0ck</a></p>
+<h3>Join room here: <a title="Join this room!" href="https://tryhackme.com/jr/b3dr0ck" target="_blank" rel="noopener">tryhackme.com/jr/b3dr0ck</a></h3>
 <p><img src="https://sls-ci-bowtie-houndstooth-root-us-east-1-assets.s3.amazonaws.com/5290charlie/blog/1649629406725-b3dr0ck-intro.png" alt="b3dr0ck intro" width="791" height="300" /></p>
 <h3>Steps</h3>
 <ul>
