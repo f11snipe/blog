@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "A New Post"
-post_date: "01/01/2019"
-post_time: "06:15 PM"
+description: "Description here..."
+image: /assets/img/post_img.png
 permalink: /blog/new-post/
 published: false
 categories:

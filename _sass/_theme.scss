@@ -8,4 +8,10 @@ body {
   .wrapper {
     max-width: 1000px;
   }
+
+  .navbar-brand {
+    &:hover, &:visited, &:active {
+      text-decoration: none;
+    }
+  }
 }

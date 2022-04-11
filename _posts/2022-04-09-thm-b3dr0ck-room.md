@@ -1,14 +1,19 @@
 ---
 layout: post
 title: 'b3dr0ck - {THM}'
-post_date: 04/09/2022
-post_time: '06:15 PM'
+description: "Created my first CTF room on TryHackMe! Gain access to the ABC servers, using lightweight custom TCP/TLS/HTTPS services. Learn about TLS certificate authorization and more!"
+image: /assets/img/b3dr0ck/gazoo.png
 permalink: /blog/thm-b3dr0ck/
 published: true
 categories:
+  - tryhackme
+  - hacking
+  - openssl
+  - https
   - thm
   - ctf
   - b3dr0ck
+  - flintstones
   - f11snipe
   - linux
   - tls

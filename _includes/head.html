@@ -3,19 +3,6 @@
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta
-    name="description"
-    content="F11snipe"
-  />
-  <meta property="og:title" content="F11snipe">
-  <meta property="og:description" content="F11snipe">
-  <meta property="og:image" content="https://f11snipe.cloud/img/logo.png">
-  <meta property="og:url" content="https://f11snipe.cloud/">
-
-  <meta name="twitter:card" content="summary_large_image">
-
-  <meta property="og:site_name" content="F11snipe">
-  <meta name="twitter:image:alt" content="F11snipe">
 
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/manifest.json" />
@@ -38,3 +25,5 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
 </head>
+
+{%- if site.instagram_username -%}<li><a href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use></svg> <span class="username">{{ site.instagram_username| escape }}</span></a></li>{%- endif -%}
