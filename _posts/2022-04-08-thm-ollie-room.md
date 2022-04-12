@@ -1,8 +1,7 @@
 ---
 layout: post
-title: 'Ollie - {THM}'
-description: "Ollie THM writeup (just notes, actual writeup coming soon!)"
-# image: /assets/img/post_img.png
+title: 'Ollie - {THM} Room'
+description: 'Ollie THM writeup (just notes, actual writeup coming soon!)'
 permalink: /blog/thm-ollie/
 published: true
 categories:
